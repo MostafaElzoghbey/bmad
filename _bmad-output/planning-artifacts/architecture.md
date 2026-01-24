@@ -20,6 +20,31 @@ _This document builds collaboratively through step-by-step discovery. Sections a
 
 ---
 
+## Table of Contents
+
+1. [Project Context Analysis](#project-context-analysis)
+   - [Requirements Overview](#requirements-overview)
+   - [Technical Constraints & Dependencies](#technical-constraints--dependencies)
+   - [Cross-Cutting Concerns Identified](#cross-cutting-concerns-identified)
+
+2. [Starter Template Evaluation](#starter-template-evaluation)
+   - [Primary Technology Domain](#primary-technology-domain)
+   - [Technical Preferences from Project Context](#technical-preferences-from-project-context)
+   - [Starter Options Considered](#starter-options-considered)
+   - [Selected Starter: create-next-app + Manual Configuration](#selected-starter-create-next-app--manual-configuration)
+   - [Architectural Decisions Provided by Starter](#architectural-decisions-provided-by-starter)
+
+3. [Core Architectural Decisions](#core-architectural-decisions)
+   - [Decision Priority Analysis](#decision-priority-analysis)
+   - [Decision 1: State Management for Persona System](#decision-1-state-management-for-persona-system)
+   - [Decision 2: API Caching & Real-Time Data Strategy](#decision-2-api-caching--real-time-data-strategy)
+   - [Decision 3: Database Schema Design](#decision-3-database-schema-design)
+   - [Decision 4: Error Handling & Resilience Patterns](#decision-4-error-handling--resilience-patterns)
+   - [Decision 5: Deployment & Environment Configuration](#decision-5-deployment--environment-configuration)
+   - [Decision Impact Analysis](#decision-impact-analysis)
+
+---
+
 ## Project Context Analysis
 
 ### Requirements Overview
