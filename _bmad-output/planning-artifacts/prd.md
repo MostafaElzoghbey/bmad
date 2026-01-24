@@ -25,6 +25,70 @@ date: '2026-01-23'
 **Author:** Sasa
 **Date:** 2026-01-23
 
+## Table of Contents
+
+1. [Success Criteria](#success-criteria)
+   - User Success
+   - Business Success
+   - Technical Success
+   - Measurable Outcomes
+
+2. [Product Scope](#product-scope)
+   - MVP - Minimum Viable Product
+   - Growth Features (Post-MVP)
+   - Vision (Future)
+
+3. [User Journeys](#user-journeys)
+   - Journey 1: Sarah - The Skeptical Recruiter (Success Path)
+   - Journey 2: Michael - The Business Client (Success Path)
+   - Journey 3: Alex - The Technical Lead (Validation Path)
+   - Journey 4: Sasa - Portfolio Owner/Admin (Content Management)
+   - Journey 5: Jennifer - Director of Engineering (Decision Maker)
+   - Journey 6: David - Potential Collaborator (Partnership Opportunity)
+
+4. [Innovation & Novel Patterns](#innovation--novel-patterns)
+   - Detected Innovation Areas
+   - Market Context & Competitive Landscape
+   - Validation Approach
+   - Risk Mitigation
+
+5. [Web Application Specific Requirements](#web-application-specific-requirements)
+   - Project-Type Overview
+   - Technical Architecture Considerations
+   - Browser Compatibility Matrix
+   - Performance Targets
+   - SEO Strategy
+   - Accessibility Level
+   - Responsive Design Requirements
+   - Real-Time Features Implementation
+   - Implementation Considerations
+
+6. [Project Scoping & Phased Development](#project-scoping--phased-development)
+   - MVP Strategy & Philosophy
+   - MVP Feature Set (Phase 1)
+   - Post-MVP Features
+   - Risk Mitigation Strategy
+
+7. [Functional Requirements](#functional-requirements)
+   - Persona & Content Personalization
+   - Project Showcase & Interactive Demonstrations
+   - Real-Time Skill Verification
+   - Content Management (Admin)
+   - Visitor Engagement & Conversion
+   - Analytics & Measurement
+   - SEO & Discoverability
+   - System & Performance
+
+8. [Non-Functional Requirements](#non-functional-requirements)
+   - Performance
+   - Security
+   - Accessibility
+   - Integration & Reliability
+   - Browser Compatibility
+   - Scalability
+
+---
+
 ## Success Criteria
 
 ### User Success
