@@ -20,6 +20,42 @@ date: '2026-01-24'
 
 ---
 
+## Table of Contents
+
+1. [Executive Summary](#executive-summary)
+   - [Project Vision](#project-vision)
+   - [Target Users](#target-users)
+   - [Key Design Challenges](#key-design-challenges)
+   - [Design Opportunities](#design-opportunities)
+
+2. [Core User Experience](#core-user-experience)
+   - [Defining Experience](#defining-experience)
+   - [Platform Strategy](#platform-strategy)
+   - [Effortless Interactions](#effortless-interactions)
+   - [Critical Success Moments](#critical-success-moments)
+   - [Experience Principles](#experience-principles)
+
+3. [Desired Emotional Response](#desired-emotional-response)
+   - [Primary Emotional Goals](#primary-emotional-goals)
+   - [Emotional Journey Mapping](#emotional-journey-mapping)
+   - [Micro-Emotions](#micro-emotions)
+   - [Design Implications](#design-implications)
+   - [Emotional Design Principles](#emotional-design-principles)
+
+4. [UX Pattern Analysis & Inspiration](#ux-pattern-analysis--inspiration)
+   - [Inspiring Products Analysis](#inspiring-products-analysis)
+   - [Transferable UX Patterns](#transferable-ux-patterns)
+   - [Anti-Patterns to Avoid](#anti-patterns-to-avoid)
+   - [Design Inspiration Strategy](#design-inspiration-strategy)
+
+5. [Design System Foundation](#design-system-foundation)
+   - [Design System Choice](#design-system-choice)
+   - [Rationale for Selection](#rationale-for-selection)
+   - [Implementation Approach](#implementation-approach)
+   - [Customization Strategy](#customization-strategy)
+
+---
+
 ## Executive Summary
 
 ### Project Vision
