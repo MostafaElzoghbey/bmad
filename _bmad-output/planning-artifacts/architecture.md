@@ -18,6 +18,60 @@ date: '2026-01-24'
 
 _This document builds collaboratively through step-by-step discovery. Sections are appended as we work through each architectural decision together._
 
+## Table of Contents
+
+1. [Project Context Analysis](#project-context-analysis)
+   - [Requirements Overview](#requirements-overview)
+   - [Technical Constraints & Dependencies](#technical-constraints--dependencies)
+   - [Cross-Cutting Concerns Identified](#cross-cutting-concerns-identified)
+
+2. [Starter Template Evaluation](#starter-template-evaluation)
+   - [Selected Starter Template](#selected-starter-template)
+   - [Architectural Decisions Provided by Starter](#architectural-decisions-provided-by-starter)
+
+3. [Core Architectural Decisions](#core-architectural-decisions)
+   - [Decision Priority Analysis](#decision-priority-analysis)
+   - [Decision 1: State Management for Persona System](#decision-1-state-management-for-persona-system)
+   - [Decision 2: API Caching & Real-Time Data Strategy](#decision-2-api-caching--real-time-data-strategy)
+   - [Decision 3: Database Schema Design](#decision-3-database-schema-design)
+   - [Decision 4: Error Handling & Resilience Patterns](#decision-4-error-handling--resilience-patterns)
+   - [Decision 5: Deployment & Environment Configuration](#decision-5-deployment--environment-configuration)
+
+4. [Implementation Patterns & Consistency Rules](#implementation-patterns--consistency-rules)
+   - [1. File & Component Naming Conventions](#1-file--component-naming-conventions)
+   - [2. API Response Format Standardization](#2-api-response-format-standardization)
+   - [3. Error Handling & Graceful Degradation](#3-error-handling--graceful-degradation)
+   - [4. Caching Strategy](#4-caching-strategy)
+   - [5. Server vs Client Component Decisions](#5-server-vs-client-component-decisions)
+   - [6. Loading States & Skeleton Screens](#6-loading-states--skeleton-screens)
+   - [7. Database Access Patterns](#7-database-access-patterns)
+   - [8. Real-Time Data Polling](#8-real-time-data-polling)
+   - [Summary](#summary)
+
+5. [Project Structure & Boundaries](#project-structure--boundaries)
+   - [Complete Project Directory Structure](#complete-project-directory-structure)
+   - [Architectural Boundaries](#architectural-boundaries)
+   - [Requirements to Structure Mapping](#requirements-to-structure-mapping)
+   - [Integration Points](#integration-points)
+   - [File Organization Patterns](#file-organization-patterns)
+
+6. [Architecture Validation Results](#architecture-validation-results)
+   - [Coherence Validation](#coherence-validation)
+   - [Requirements Coverage Validation](#requirements-coverage-validation)
+   - [Implementation Readiness Validation](#implementation-readiness-validation)
+   - [Gap Analysis Results](#gap-analysis-results)
+   - [Validation Issues Addressed](#validation-issues-addressed)
+   - [Architecture Completeness Checklist](#architecture-completeness-checklist)
+   - [Architecture Readiness Assessment](#architecture-readiness-assessment)
+   - [Implementation Handoff](#implementation-handoff)
+
+7. [Architecture Completion Summary](#architecture-completion-summary)
+   - [Workflow Completion](#workflow-completion)
+   - [Final Architecture Deliverables](#final-architecture-deliverables)
+   - [Implementation Handoff](#implementation-handoff-1)
+   - [Quality Assurance Checklist](#quality-assurance-checklist)
+   - [Project Success Factors](#project-success-factors)
+
 ---
 
 ## Project Context Analysis

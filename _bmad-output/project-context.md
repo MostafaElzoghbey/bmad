@@ -1,12 +1,13 @@
 ---
 project_name: 'bmad'
 user_name: 'Sasa'
-date: '2026-01-24'
-sections_completed: ['technology_stack', 'language_rules', 'framework_rules', 'testing_rules', 'code_quality_rules', 'workflow_rules', 'critical_rules']
+date: '2026-01-29'
+sections_completed: ['technology_stack', 'language_rules', 'framework_rules', 'testing_rules', 'code_quality_rules', 'workflow_rules', 'critical_rules', 'architectural_decisions']
 status: 'complete'
-rule_count: 7
+rule_count: 8
 optimized_for_llm: true
 existing_patterns_found: 0
+architecture_source: '_bmad-output/planning-artifacts/architecture.md'
 ---
 
 # Project Context for AI Agents
@@ -291,6 +292,93 @@ _This file contains critical rules and patterns that AI agents must follow when 
 
 ---
 
+## Architectural Decisions
+
+> **Source:** `_bmad-output/planning-artifacts/architecture.md` (completed 2026-01-28)
+
+These are the 5 core architectural decisions that shape the entire implementation. AI agents must follow these decisions exactly.
+
+### Decision 1: State Management for Persona System
+
+**Technology:** React Context + localStorage  
+**Pattern:** `PersonaContext` wrapping app, storing selection in localStorage  
+**Files:** `src/contexts/PersonaContext.tsx`, `src/hooks/usePersona.ts`
+
+**Critical Rules:**
+- Persona state is CLIENT-SIDE ONLY (`'use client'` directive required)
+- Three personas: `'recruiter' | 'client' | 'developer' | null`
+- Persist to localStorage on every change
+- Load from localStorage on mount (useEffect)
+- All pages consume persona context for content prioritization
+
+### Decision 2: API Caching & Real-Time Data Strategy
+
+**Technology:** SWR (stale-while-revalidate) with custom polling intervals  
+**Pattern:** Custom hooks (`useGitHubStats`, `useLeetCodeStats`) wrapping SWR
+
+**Critical Rules:**
+- **GitHub API:** 5-minute polling (`refreshInterval: 5 * 60 * 1000`)
+- **LeetCode API:** 1-hour polling (`refreshInterval: 60 * 60 * 1000`)
+- **Deduplication:** 1-minute window (`dedupingInterval: 60 * 1000`)
+- **Graceful Degradation:** Show stale data with timestamp when API fails
+- **Response Format:** `{ data, status: 'success'|'stale'|'error', timestamp, error? }`
+
+### Decision 3: Database Schema (Prisma + PostgreSQL)
+
+**ORM:** Prisma Client  
+**Database:** PostgreSQL (Vercel Postgres or external)  
+**Schema:** `prisma/schema.prisma`
+
+**Critical Models:**
+- **User:** Admin authentication (id, email, name, passwordHash)
+- **Project:** Portfolio projects with persona-specific fields (recruiterHighlight, clientHighlight, developerHighlight)
+- **Testimonial:** Client testimonials linked to projects
+- **Analytics:** Page views, persona selections, engagement tracking
+- **PersonaSelection:** Track persona selection events for analytics
+
+**Critical Rules:**
+- Use Prisma Client singleton pattern (`src/lib/db.ts`)
+- All database access through Prisma (NEVER raw SQL)
+- Use `cuid()` for IDs, not auto-increment integers
+- Arrays for techStack and screenshotUrls (PostgreSQL native arrays)
+
+### Decision 4: Error Handling & Resilience Patterns
+
+**Pattern:** Graceful degradation with stale data fallback
+
+**Critical Rules:**
+- **API Routes:** Try-catch with cached data fallback (return 200 with `status: 'stale'`)
+- **Client Components:** Error boundaries (`src/app/error.tsx`, `src/app/global-error.tsx`)
+- **Loading States:** Skeleton screens with reserved space (prevent CLS violations)
+- **External APIs:** NEVER throw errors to users - always show cached data or friendly message
+- **Logging:** Server-side console.error for debugging, user-friendly messages client-side
+
+### Decision 5: Deployment & Environment Configuration
+
+**Platform:** Vercel (zero-config Next.js deployment)  
+**Pattern:** Git-based deployments with automatic HTTPS/SSL
+
+**Critical Environment Variables:**
+```bash
+DATABASE_URL                    # PostgreSQL connection string
+NEXTAUTH_SECRET                 # Generate: openssl rand -base64 32
+NEXTAUTH_URL                    # Production URL
+GITHUB_TOKEN                    # GitHub API token (5,000 req/hour)
+GITHUB_USERNAME                 # Your GitHub username
+LEETCODE_USERNAME               # Your LeetCode username
+NEXT_PUBLIC_VERCEL_ANALYTICS_ID # Auto-set by Vercel
+PLAUSIBLE_DOMAIN                # Your domain for Plausible Analytics
+SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD # Email for contact form
+```
+
+**Critical Rules:**
+- **NEVER** expose API keys client-side (no `NEXT_PUBLIC_` prefix for secrets)
+- All external API calls proxied through Next.js API routes
+- Build command: `prisma generate && next build`
+- Main branch → production, PRs → preview deployments
+
+---
+
 ## Usage Guidelines
 
 **For AI Agents:**
@@ -307,4 +395,4 @@ _This file contains critical rules and patterns that AI agents must follow when 
 - Review quarterly for outdated rules
 - Remove rules that become obvious over time
 
-**Last Updated:** 2026-01-24
+**Last Updated:** 2026-01-29 (Added Architectural Decisions from completed architecture.md)
