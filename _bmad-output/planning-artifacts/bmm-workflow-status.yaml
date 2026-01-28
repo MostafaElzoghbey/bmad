@@ -74,13 +74,12 @@ workflow_status:
   # Phase 3: Solutioning
   phase_3_solutioning:
     create-architecture:
-      status: "_bmad-output/planning-artifacts/architecture.md"
+      status: "required"
       agent: "architect"
       command: "/bmad:bmm:workflows:create-architecture"
-      completed: "2026-01-24T03:38:00+02:00"
       exec: "{project-root}/_bmad/bmm/workflows/3-solutioning/create-architecture/workflow.md"
-      output: "Architecture Decision Document (775+ lines)"
-      note: "Complete architecture with project context analysis, starter template evaluation (create-next-app + Prisma/shadcn/NextAuth), and 5 core architectural decisions: (1) React Context + localStorage for persona state, (2) SWR for API caching, (3) Full Prisma schema with analytics, (4) Graceful degradation error handling, (5) Vercel deployment configuration. Ready for epics and stories."
+      output: "System architecture document"
+      note: "Complete system design for greenfield projects"
       
     create-epics-and-stories:
       status: "required"
