@@ -1,0 +1,130 @@
+# generated: 2026-01-29
+# project: bmad
+# project_key: bmad
+# tracking_system: file-system
+# story_location: d:\Repositories\portfolio\bmad\_bmad-output\implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2026-01-29
+project: bmad
+project_key: bmad
+tracking_system: file-system
+story_location: d:\Repositories\portfolio\bmad\_bmad-output\implementation-artifacts
+
+development_status:
+  # Epic 1: Project Foundation & Deployment Pipeline
+  epic-1: backlog
+  1-1-initialize-nextjs-project-with-typescript-and-tailwind: backlog
+  1-2-configure-shadcn-ui-component-library: backlog
+  1-3-set-up-prisma-orm-with-postgresql: backlog
+  1-4-configure-vercel-deployment-with-environment-variables: backlog
+  1-5-implement-git-workflow-and-branch-protection: backlog
+  epic-1-retrospective: optional
+
+  # Epic 2: Persona-Based Experience System
+  epic-2: backlog
+  2-1-create-personacontext-with-react-context-api: backlog
+  2-2-implement-localstorage-persistence-for-persona-selection: backlog
+  2-3-build-persona-selector-component-with-smooth-transitions: backlog
+  2-4-implement-persona-specific-content-hierarchies: backlog
+  2-5-add-persona-switcher-in-navigation: backlog
+  epic-2-retrospective: optional
+
+  # Epic 3: Core Pages & SEO Foundation
+  epic-3: backlog
+  3-1-create-home-page-with-metadata-and-structured-data: backlog
+  3-2-build-about-page-with-bio-and-experience-timeline: backlog
+  3-3-create-skills-page-with-tech-stack-and-proficiency-indicators: backlog
+  3-4-implement-resume-download-functionality: backlog
+  3-5-add-social-media-links-and-contact-information: backlog
+  3-6-generate-xml-sitemap-and-robots-txt: backlog
+  3-7-implement-responsive-design-and-accessibility: backlog
+  epic-3-retrospective: optional
+
+  # Epic 4: Real-Time Skill Verification
+  epic-4: backlog
+  4-1-create-github-api-proxy-route: backlog
+  4-2-implement-swr-hook-for-github-data-fetching: backlog
+  4-3-display-github-contribution-graph: backlog
+  4-4-add-last-active-timestamp-with-pulse-indicator: backlog
+  4-5-create-skills-matrix-with-github-verified-badges: backlog
+  4-6-implement-skeleton-screens-for-loading-states: backlog
+  epic-4-retrospective: optional
+
+  # Epic 5: Interactive Project Showcase
+  epic-5: backlog
+  5-1-create-project-database-schema: backlog
+  5-2-build-project-gallery-component: backlog
+  5-3-create-project-detail-page-with-persona-specific-highlights: backlog
+  5-4-embed-live-demos-with-iframes: backlog
+  5-5-integrate-codesandbox-stackblitz-code-playgrounds: backlog
+  5-6-add-video-walkthroughs-with-technical-narration: backlog
+  5-7-display-performance-metrics-visualization: backlog
+  5-8-create-interactive-architecture-diagrams: backlog
+  5-9-build-case-study-section-with-problem-solution-impact: backlog
+  5-10-add-project-filtering-and-sorting: backlog
+  epic-5-retrospective: optional
+
+  # Epic 6: Visitor Engagement & Conversion
+  epic-6: backlog
+  6-1-create-contact-form-with-zod-validation: backlog
+  6-2-implement-persona-specific-form-fields: backlog
+  6-3-add-email-integration-with-smtp: backlog
+  6-4-implement-spam-protection-and-rate-limiting: backlog
+  6-5-add-consultation-booking-for-client-persona: backlog
+  6-6-add-collaboration-interest-for-developer-persona: backlog
+  6-7-display-expected-response-time-and-confirmation: backlog
+  epic-6-retrospective: optional
+
+  # Epic 7: Admin Panel & Content Management
+  epic-7: backlog
+  7-1-implement-nextauth-js-authentication: backlog
+  7-2-create-admin-dashboard-layout: backlog
+  7-3-build-project-crud-interface: backlog
+  7-4-implement-image-upload-with-automatic-optimization: backlog
+  7-5-add-multi-persona-preview-before-publishing: backlog
+  7-6-implement-instant-publishing-workflow: backlog
+  7-7-create-personal-information-management-interface: backlog
+  7-8-add-contact-form-settings-management: backlog
+  7-9-implement-error-handling-with-graceful-degradation: backlog
+  epic-7-retrospective: optional
+
+  # Epic 8: Analytics & Measurement
+  epic-8: backlog
+  8-1-integrate-vercel-analytics-for-core-web-vitals: backlog
+  8-2-integrate-plausible-analytics-for-privacy-friendly-tracking: backlog
+  8-3-create-personaselection-tracking-model: backlog
+  8-4-create-projectanalytics-tracking-model: backlog
+  8-5-build-analytics-dashboard-for-portfolio-owner: backlog
+  8-6-implement-engagement-heatmaps: backlog
+  8-7-add-conversion-funnel-analysis: backlog
+  8-8-integrate-sentry-for-error-tracking: backlog
+  epic-8-retrospective: optional
