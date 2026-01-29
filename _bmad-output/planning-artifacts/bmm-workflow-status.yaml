@@ -95,12 +95,16 @@ workflow_status:
       note: "Comprehensive breakdown with 65 FRs, 56 NFRs, 150+ additional requirements from 7 input documents. Created 8 user-value-focused epics with 57 implementation-ready stories, all with detailed acceptance criteria (Given/When/Then), technical requirements, and zero forward dependencies. Full validation passed: 100% FR coverage, architecture compliance, just-in-time DB creation, story quality criteria met. Ready for implementation."
       
     test-design:
-      status: "optional"
+      status: "_bmad-output/testing-artifacts/test-design-system.md"
       agent: "tea"
       command: "/bmad:bmm:workflows:test-design"
+      completed: "2026-01-29T04:47:00+02:00"
       workflow: "{project-root}/_bmad/bmm/workflows/testarch/test-design/workflow.yaml"
-      output: "System-level testability review"
-      note: "Testability assessment before gate check"
+      output: "System-level testability review (comprehensive test design document)"
+      gate_decision: "CONCERNS (conditional pass)"
+      critical_risks: 1
+      high_risks: 2
+      note: "Completed system-level testability assessment. Architecture supports robust testing with clear separation of concerns. Identified 5 ASRs (Persona Experience, Real-Time Verification, Performance, Accessibility, SEO). Defined test pyramid strategy: 50% Unit (Jest), 35% Integration (Playwright API), 15% E2E (Playwright). 1 critical risk (API polling timing - Score 9) requires mitigation before E2E tests. 2 high risks (persona test multiplication, external API flakiness - Score 6) require mitigation plans. Recommendations: implement test-specific polling intervals, set up test infrastructure in Epic 1, create data factories and fixtures."
       
     implementation-readiness:
       status: "required"
